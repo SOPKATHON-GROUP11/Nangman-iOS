@@ -19,14 +19,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-cL-RzD">
                                 <rect key="frame" x="0.0" y="165" width="375" height="613"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-VO-3RX">
-                                <rect key="frame" x="311" y="664" width="48" height="48"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plusBtn"/>
-                                <connections>
-                                    <action selector="didTapWriteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oN4-wU-vgk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwM-WH-WFR">
                                 <rect key="frame" x="18" y="625" width="144" height="104"/>
                                 <state key="normal" title="Button"/>
@@ -95,6 +87,14 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Persimmon-1"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-VO-3RX">
+                                <rect key="frame" x="311" y="664" width="48" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plusBtn"/>
+                                <connections>
+                                    <action selector="didTapWriteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oN4-wU-vgk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="fruitBeige"/>
@@ -112,6 +112,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="basketImageView" destination="KwM-WH-WFR" id="SiG-kR-vbr"/>
                         <outlet property="fruit1" destination="fNk-IJ-vK5" id="k0w-Hr-nKe"/>
                         <outlet property="fruit10" destination="Fsj-0N-arC" id="hdW-1A-HyC"/>
                         <outlet property="fruit2" destination="RuQ-AM-MSo" id="yGI-En-MeQ"/>

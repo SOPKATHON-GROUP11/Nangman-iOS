@@ -6,7 +6,7 @@
 //
 
 import UIKit
-var isPosted = false
+var isPosted = true
 
 class MyTreeVC: UIViewController {
     
@@ -23,13 +23,17 @@ class MyTreeVC: UIViewController {
     @IBOutlet weak var fruit9: UIButton!
     @IBOutlet weak var fruit10: UIButton!
     
+    @IBOutlet weak var basketImageView: UIButton!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if isPosted == true {
-            fruit10.isHidden = false
-        } else {
-            fruit10.isHidden = true
+        DispatchQueue.main.async {
+            if isPosted == true {
+                self.fruit10.isHidden = false
+            } else {
+                self.fruit10.isHidden = true
+            }
         }
+
     }
     
     override func viewDidLoad() {
@@ -51,6 +55,7 @@ class MyTreeVC: UIViewController {
                     [self.fruit1, self.fruit2, self.fruit3, self.fruit4, self.fruit5, self.fruit6, self.fruit7, self.fruit8, self.fruit9, self.fruit10].forEach {
                         $0?.isHidden = true
                     }
+                    self.basketImageView.setImage(UIImage(named: "Group 33726"), for: .normal)
                 }
             }
             alert.showPopUp(vc: self, message:
@@ -63,6 +68,8 @@ class MyTreeVC: UIViewController {
         guard let floatingButtonVC = self.storyboard?.instantiateViewController(withIdentifier: FloatingButtonVC.className) as? FloatingButtonVC else { return }
         floatingButtonVC.modalPresentationStyle = .overCurrentContext
         floatingButtonVC.modalTransitionStyle = .crossDissolve
+            floatingButtonVC.delegate = self
+        
         self.present(floatingButtonVC, animated: true)
     }
 }
@@ -109,5 +116,11 @@ extension MyTreeVC {
                 print("데이터 불러오기 실패")
             }
         }
+    }
+}
+
+extension MyTreeVC: FloatingButtonVCDelegate {
+    func addFruit() {
+        self.fruit10.isHidden = false
     }
 }

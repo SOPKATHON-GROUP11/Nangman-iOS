@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FloatingButtonVCDelegate:AnyObject {
+    func addFruit()
+}
+
 class FloatingButtonVC: UIViewController {
     
     
@@ -19,7 +23,7 @@ class FloatingButtonVC: UIViewController {
     
     var originAppleY = 0.0
     var originPersimmonY = 0.0
-    
+    weak var delegate: FloatingButtonVCDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -49,11 +53,19 @@ class FloatingButtonVC: UIViewController {
     @IBAction func didTapPersimmonButton(_ sender: Any) {
         guard let writingVC = UIStoryboard.init(name: WritingVC.className, bundle: nil).instantiateViewController(withIdentifier: WritingVC.className) as? WritingVC else { return }
         writingVC.modalPresentationStyle = .fullScreen
+        writingVC.fruitType = .persimmon
+        writingVC.delegate = self
+        self.view.layer.opacity = 0
         self.present(writingVC, animated: true)
+        
+
     }
     @IBAction func didTapAppleButton(_ sender: Any) {
         guard let writingVC = UIStoryboard.init(name: WritingVC.className, bundle: nil).instantiateViewController(withIdentifier: WritingVC.className) as? WritingVC else { return }
         writingVC.modalPresentationStyle = .fullScreen
+        writingVC.delegate = self
+        self.view.isHidden = true
+
         self.present(writingVC, animated: true)
     }
     @IBAction func didTapDismissButton(_ sender: Any) {
@@ -62,5 +74,14 @@ class FloatingButtonVC: UIViewController {
     private func setUI() {
         appleCenterY.constant = 0
         persimmonCenterY.constant = 0
+    }
+}
+
+extension FloatingButtonVC: WritingVCDelegate {
+    func post() {
+        delegate?.addFruit()
+    }
+    func goHome() {
+        self.dismiss(animated: true)
     }
 }

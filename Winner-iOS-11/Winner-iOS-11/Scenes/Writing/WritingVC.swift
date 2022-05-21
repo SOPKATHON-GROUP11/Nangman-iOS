@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol WritingVCDelegate: AnyObject {
+    func post()
+    func goHome()
+}
 class WritingVC: BaseVC {
 
     // MARK: - @IBOutlet Properties
@@ -17,9 +21,10 @@ class WritingVC: BaseVC {
     @IBOutlet weak var persimmonBtn: UIButton!
     @IBOutlet weak var fruitImageView: UIImageView!
     @IBOutlet weak var suggestionLabel: UILabel!
+    weak var delegate: WritingVCDelegate?
     
     var fruitType: FruitType = .apple
-    
+//    weak var delegate: WritingVCDelegate
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +69,8 @@ class WritingVC: BaseVC {
             switch response {
             case .success(let data):
                 print(data)
+                isPosted = true
+                self.delegate?.post()
                 self.dismiss(animated: true)
             case .requestErr(let data):
                 print(data)
@@ -84,7 +91,9 @@ class WritingVC: BaseVC {
         }
         alert.rightButton.press {
             self.dismiss(animated: true) {
+                self.delegate?.goHome()
                 self.dismiss(animated: true)
+                
             }
         }
         alert.showPopUp(vc: self, message:

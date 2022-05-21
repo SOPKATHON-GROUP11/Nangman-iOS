@@ -133,7 +133,6 @@
                                             <constraint firstAttribute="height" constant="40" id="a2V-rp-KGx"/>
                                             <constraint firstAttribute="width" constant="106" id="qKx-Ni-cv8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                         <color key="tintColor" name="fruitGray1"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="감"/>
