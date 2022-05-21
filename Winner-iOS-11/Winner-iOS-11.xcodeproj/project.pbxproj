@@ -46,6 +46,7 @@
 		C72892A328394F9900588B39 /* FloatingButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892A228394F9900588B39 /* FloatingButtonVC.swift */; };
 		C72892AB283967D000588B39 /* MyTreeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AA283967D000588B39 /* MyTreeService.swift */; };
 		C72892AE283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */; };
+		CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		C72892A228394F9900588B39 /* FloatingButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonVC.swift; sourceTree = "<group>"; };
 		C72892AA283967D000588B39 /* MyTreeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreeService.swift; sourceTree = "<group>"; };
 		C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyTreeFruitMaximumCheckModel.swift; sourceTree = "<group>"; };
+		CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			children = (
 				C72892902839336C00588B39 /* WritingVC.storyboard */,
 				C72892922839337F00588B39 /* WritingVC.swift */,
+				CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				C728927A2839231400588B39 /* Adjusted+.swift in Sources */,
 				C72892782839205E00588B39 /* NetworkResult.swift in Sources */,
 				C72892482838F03A00588B39 /* AppDelegate.swift in Sources */,
+				CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */,
 				C728927E2839240A00588B39 /* UILabel+.swift in Sources */,
 				C72892A328394F9900588B39 /* FloatingButtonVC.swift in Sources */,
 				C72892802839249300588B39 /* UITableView+.swift in Sources */,
@@ -480,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -534,7 +538,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

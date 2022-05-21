@@ -7,23 +7,38 @@
 
 import UIKit
 
-class WritingVC: UIViewController {
+class WritingVC: BaseVC {
 
+    // MARK: - @IBOutlet Properties
+    @IBOutlet weak var placeholderLabel: UILabel!
+    @IBOutlet weak var inputTextView: UITextView!
+    @IBOutlet weak var textCountLabel: UILabel!
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setDelegate()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Functions
+    func setDelegate() {
+        inputTextView.delegate = self
     }
-    */
 
+    func checkMaxLength(_ textView: UITextView) {
+        if (textView.text.count) > 200 {
+            textView.deleteBackward()
+        }
+    }
+    
+}
+
+// MARK: - Extensions
+extension WritingVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !inputTextView.text.isEmpty
+        checkMaxLength(textView)
+        let count = textView.text.count
+        textCountLabel.text = "\(count)/200"
+    }
 }
