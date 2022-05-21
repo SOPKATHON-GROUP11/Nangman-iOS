@@ -38,6 +38,9 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapPostFruit:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HWl-zl-RMn"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-eN-zW4">
                                 <rect key="frame" x="7" y="115" width="342" height="371"/>
@@ -99,7 +102,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="ajj-4C-Jbb">
                                 <rect key="frame" x="51.5" y="520" width="272" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4P-nb-MVb">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4P-nb-MVb">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="40"/>
                                         <color key="backgroundColor" name="fruitRed"/>
                                         <constraints>
@@ -116,8 +119,11 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="DidTapFruitChangeBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ETo-o0-5Y7"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fd2-ty-hLB">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fd2-ty-hLB">
                                         <rect key="frame" x="166" y="0.0" width="106" height="40"/>
                                         <color key="backgroundColor" name="fruitLightGray"/>
                                         <constraints>
@@ -133,6 +139,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="DidTapFruitChangeBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gOF-7K-jae"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -155,13 +164,16 @@
                             <constraint firstItem="wFD-Mn-F25" firstAttribute="top" secondItem="QCU-qq-5hb" secondAttribute="bottom" constant="20" id="gln-If-cle"/>
                             <constraint firstItem="ZSH-eN-zW4" firstAttribute="top" secondItem="wFD-Mn-F25" secondAttribute="bottom" constant="5" id="ojt-91-5u4"/>
                             <constraint firstItem="gac-ad-fmq" firstAttribute="leading" secondItem="ZSH-eN-zW4" secondAttribute="leading" constant="86" id="pp4-Rj-KmP"/>
-                            <constraint firstItem="gac-ad-fmq" firstAttribute="trailing" secondItem="ZSH-eN-zW4" secondAttribute="trailing" constant="-50" id="q5R-C3-uDv"/>
+                            <constraint firstItem="gac-ad-fmq" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" constant="-76" id="q5R-C3-uDv"/>
                             <constraint firstItem="ajj-4C-Jbb" firstAttribute="top" secondItem="ZSH-eN-zW4" secondAttribute="bottom" constant="34" id="qcx-n9-Qu5"/>
                             <constraint firstItem="gac-ad-fmq" firstAttribute="top" secondItem="ZSH-eN-zW4" secondAttribute="top" constant="160" id="riO-1m-Dnx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appleBtn" destination="E4P-nb-MVb" id="c8P-gH-mpO"/>
+                        <outlet property="fruitImageView" destination="ZSH-eN-zW4" id="SUF-3w-GSt"/>
                         <outlet property="inputTextView" destination="ivX-bm-5qf" id="2A3-fX-bU4"/>
+                        <outlet property="persimmonBtn" destination="Fd2-ty-hLB" id="w8z-K8-Em0"/>
                         <outlet property="placeholderLabel" destination="XqR-Va-pTJ" id="52j-Nz-in5"/>
                         <outlet property="textCountLabel" destination="ltD-GN-fHu" id="2dO-Hz-giu"/>
                     </connections>

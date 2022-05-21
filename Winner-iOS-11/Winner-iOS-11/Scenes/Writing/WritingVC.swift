@@ -13,6 +13,11 @@ class WritingVC: BaseVC {
     @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var inputTextView: UITextView!
     @IBOutlet weak var textCountLabel: UILabel!
+    @IBOutlet weak var appleBtn: UIButton!
+    @IBOutlet weak var persimmonBtn: UIButton!
+    @IBOutlet weak var fruitImageView: UIImageView!
+    
+    var fruitType: FruitType = .apple
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -31,7 +36,43 @@ class WritingVC: BaseVC {
         }
     }
     
+    
+    @IBAction func DidTapFruitChangeBtn(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.fruitRed
+        sender.tintColor = .white
+        if sender.tag == 1 {
+            persimmonBtn.backgroundColor = .fruitLightGray
+            persimmonBtn.tintColor = .fruitGray1
+            fruitImageView.image = UIImage(named: "4")
+            fruitType = .apple
+        } else {
+            appleBtn.backgroundColor = .fruitLightGray
+            appleBtn.tintColor = .fruitGray1
+            fruitImageView.image = UIImage(named: "감이당 1")
+            fruitType = .persimmon
+        }
+    }
+    
+    
+    @IBAction func didTapPostFruit(_ sender: UIButton) {
+        PostFruitService.shared.postFruit(fruitType: fruitType, contents: inputTextView.text) { response in
+            switch response {
+            case .success(let data):
+                print(data)
+                self.dismiss(animated: true)
+            case .requestErr(let data):
+                print(data)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverError")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
 }
+
 
 // MARK: - Extensions
 extension WritingVC: UITextViewDelegate {
