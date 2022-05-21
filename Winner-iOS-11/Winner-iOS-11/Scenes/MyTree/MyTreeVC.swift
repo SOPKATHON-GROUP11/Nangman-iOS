@@ -9,6 +9,7 @@ import UIKit
 
 class MyTreeVC: UIViewController {
     
+    @IBOutlet weak var miningButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,4 +22,7 @@ class MyTreeVC: UIViewController {
         self.present(floatingButtonVC, animated: true)
     }
 
+    @IBAction func didTapMiningButton(_ sender: Any) {
+        
+    }
 }
