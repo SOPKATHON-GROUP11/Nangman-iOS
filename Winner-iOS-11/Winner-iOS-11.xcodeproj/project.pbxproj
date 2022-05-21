@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		696CAEA02839465600EB0B1D /* FruitListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696CAE9E2839465600EB0B1D /* FruitListTVC.swift */; };
 		696CAEA12839465600EB0B1D /* FruitListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696CAE9F2839465600EB0B1D /* FruitListTVC.xib */; };
-		696CAEA3283948DE00EB0B1D /* FruitListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696CAEA2283948DE00EB0B1D /* FruitListDataModel.swift */; };
+		696CAEA3283948DE00EB0B1D /* AllFruitListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696CAEA2283948DE00EB0B1D /* AllFruitListDataModel.swift */; };
+		696CAEA52839702F00EB0B1D /* FruitListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696CAEA42839702F00EB0B1D /* FruitListService.swift */; };
 		C72892482838F03A00588B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892472838F03A00588B39 /* AppDelegate.swift */; };
 		C728924A2838F03A00588B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892492838F03A00588B39 /* SceneDelegate.swift */; };
 		C728924C2838F03A00588B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728924B2838F03A00588B39 /* ViewController.swift */; };
@@ -50,7 +51,8 @@
 /* Begin PBXFileReference section */
 		696CAE9E2839465600EB0B1D /* FruitListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListTVC.swift; sourceTree = "<group>"; };
 		696CAE9F2839465600EB0B1D /* FruitListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitListTVC.xib; sourceTree = "<group>"; };
-		696CAEA2283948DE00EB0B1D /* FruitListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListDataModel.swift; sourceTree = "<group>"; };
+		696CAEA2283948DE00EB0B1D /* AllFruitListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFruitListDataModel.swift; sourceTree = "<group>"; };
+		696CAEA42839702F00EB0B1D /* FruitListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListService.swift; sourceTree = "<group>"; };
 		C72892442838F03A00588B39 /* Winner-iOS-11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Winner-iOS-11.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72892472838F03A00588B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72892492838F03A00588B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 			children = (
 				696CAE9E2839465600EB0B1D /* FruitListTVC.swift */,
 				696CAE9F2839465600EB0B1D /* FruitListTVC.xib */,
-				696CAEA2283948DE00EB0B1D /* FruitListDataModel.swift */,
+				696CAEA2283948DE00EB0B1D /* AllFruitListDataModel.swift */,
 			);
 			path = FruitCell;
 			sourceTree = "<group>";
@@ -277,6 +279,7 @@
 				696CAE9D283945CF00EB0B1D /* FruitCell */,
 				C728929A283933C600588B39 /* FruitListVC.storyboard */,
 				C728929C283933CE00588B39 /* FruitListVC.swift */,
+				696CAEA42839702F00EB0B1D /* FruitListService.swift */,
 			);
 			path = FruitList;
 			sourceTree = "<group>";
@@ -380,7 +383,7 @@
 				C728927428391FF800588B39 /* APIConstants.swift in Sources */,
 				C72892AE283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift in Sources */,
 				C728924C2838F03A00588B39 /* ViewController.swift in Sources */,
-				696CAEA3283948DE00EB0B1D /* FruitListDataModel.swift in Sources */,
+				696CAEA3283948DE00EB0B1D /* AllFruitListDataModel.swift in Sources */,
 				C728927A2839231400588B39 /* Adjusted+.swift in Sources */,
 				C72892782839205E00588B39 /* NetworkResult.swift in Sources */,
 				C72892482838F03A00588B39 /* AppDelegate.swift in Sources */,
@@ -398,6 +401,7 @@
 				C728927C2839233300588B39 /* NSObject+.swift in Sources */,
 				C728926E28391E6900588B39 /* UIViewController+.swift in Sources */,
 				C728924A2838F03A00588B39 /* SceneDelegate.swift in Sources */,
+				696CAEA52839702F00EB0B1D /* FruitListService.swift in Sources */,
 				C728926C28391AD600588B39 /* BaseVC.swift in Sources */,
 				C72892AB283967D000588B39 /* MyTreeService.swift in Sources */,
 				C72892862839278400588B39 /* UIButton+.swift in Sources */,
