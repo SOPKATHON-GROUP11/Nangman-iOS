@@ -9,21 +9,61 @@ import UIKit
 
 class FruitListVC: UIViewController {
 
+   // MARK: - @IBOutlet Properties
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var fruitListTV: UITableView!
+    
+    var isAll = true
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        requestGetAllFruitURL()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setTableView() {
+        let fruitListNib = UINib(nibName: FruitListTVC.className, bundle: nil)
+        fruitListTV.register(fruitListNib, forCellReuseIdentifier: FruitListTVC.className)
+        
+        fruitListTV.delegate = self
+        fruitListTV.dataSource = self
     }
-    */
-
 }
+
+extension FruitListVC: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
+
+extension FruitListVC: UITableViewDataSource {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return 1
+        //return FruitListDataModel.sampleData.count
+   }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: FruitListTVC.className, for: indexPath)
+        return cell
+    }
+}
+
+extension FruitListVC {
+    private func fetchData() {
+        
+    }
+    
+    private func requestGetAllFruitURL() {
+        FruitListService.shared.requestGetAllFruitURL() { networkResult in
+            switch networkResult {
+            case .success(let res):
+                guard let response = res as? [AllFruitListDataModel] else { return }
+                print(response)
+            default:
+                print("데이터 불러오기 실패")
+            }
+        }
+    }
+}
+

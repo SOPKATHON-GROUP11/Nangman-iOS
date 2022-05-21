@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fruit ListVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FruitListVC" id="Y6W-OH-hqX" customClass="FruitListVC" customModule="Winner_iOS_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UeX-4r-MiL" userLabel="Fruit Table View">
+                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gym-dw-Wd8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjD-fA-8v1">
+                                        <rect key="frame" x="186" y="24.5" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="PjD-fA-8v1" firstAttribute="centerY" secondItem="gym-dw-Wd8" secondAttribute="centerY" id="0yf-4z-l4Q"/>
+                                    <constraint firstAttribute="height" constant="70" id="gCR-6u-ofe"/>
+                                    <constraint firstItem="PjD-fA-8v1" firstAttribute="centerX" secondItem="gym-dw-Wd8" secondAttribute="centerX" id="grS-rP-AXx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gym-dw-Wd8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Dn0-Id-41n"/>
+                            <constraint firstItem="UeX-4r-MiL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Gjn-kz-P6h"/>
+                            <constraint firstItem="UeX-4r-MiL" firstAttribute="top" secondItem="gym-dw-Wd8" secondAttribute="bottom" id="WHF-ZQ-Bl5"/>
+                            <constraint firstItem="gym-dw-Wd8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ePO-tt-Eai"/>
+                            <constraint firstItem="UeX-4r-MiL" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="rdr-lp-fzY"/>
+                            <constraint firstItem="gym-dw-Wd8" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="tzh-vQ-y9H"/>
+                            <constraint firstItem="UeX-4r-MiL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xp5-aJ-g2t"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fruitListTV" destination="UeX-4r-MiL" id="qrC-nO-CE8"/>
+                        <outlet property="titleLabel" destination="PjD-fA-8v1" id="1Kx-gD-zA4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-199" y="66"/>
         </scene>
     </scenes>
     <resources>

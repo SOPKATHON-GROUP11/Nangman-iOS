@@ -8,18 +8,37 @@
 import Foundation
 
 struct APIConstants {
-//    // MARK: Base URL
-//    static let baseURL = "https://asia-northeast3-wesopt29-328c5.cloudfunctions.net/api"
-//
-//    // MARK: Feature URL
-//    static let getMyPlayListURL = baseURL + "/user/"
-//    static let addNewPlayListURL = baseURL + "/playlist"
-//
-//    static func getMyPlayListDetailURL(id: String) -> String {
-//        return baseURL + "/playlist/\(id)"
-//    }
-//
-//    static func likeMyPlayListURL(id: String) -> String {
-//        return baseURL + "/playlist/\(id)/like"
-//    }
+    // MARK: Base URL
+    static let baseURL = "http://3.34.192.134:8000"
+
+    // MARK: Feature URL
+    
+    /// 전체 게시글 조회
+    static let getAllFruitURL = baseURL + "/fruit"
+    
+    /// 게시글 작성
+    static let postFruitURL = baseURL + "/fruit"
+    
+
+    /// 특정 게시물 물뿌리기
+    static func postWarteringURL(fruitID: String) -> String {
+        return baseURL + "/fruit/\(fruitID)/water"
+    }
+
+    /// 특정 게시글 상세조회
+    static func getTargetFruit(fruitID: String) -> String {
+        return baseURL + "/fruit/\(fruitID)"
+    }
+    
+    /// 본인 게시글 전체조회
+    static let getMyFruit = baseURL + "/fruit/my"
+    
+    /// 트리에 달려있는 본인 게시글 전체 조회
+    static let getMyTreeFruit = baseURL + "/fruit/my/tree"
+    
+    /// 트리에 달려있는 게시물이 10개가 넘는지 확인
+    static let getMyTreeFruitMaximumCheck = baseURL + "/my/check"
+    
+    /// 내 나무에 달린 과일들 수확
+    static let postMyTreeFruitBasket = baseURL + "/my/basket"
 }

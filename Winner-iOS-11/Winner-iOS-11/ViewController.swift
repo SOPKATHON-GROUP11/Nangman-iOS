@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func tapBtn(_ sender: Any) {
+        guard let vc = UIStoryboard.init(name: MyTreeVC.className, bundle: nil).instantiateViewController(withIdentifier: MyTreeVC.className) as? MyTreeVC else { return }
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
 }
-
