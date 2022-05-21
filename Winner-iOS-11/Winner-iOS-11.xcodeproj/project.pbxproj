@@ -52,6 +52,8 @@
 		CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */; };
 		CE2443FC283981D60049BE9C /* PostFruitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443FB283981D60049BE9C /* PostFruitService.swift */; };
 		CE2443FE283982640049BE9C /* postFruitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443FD283982640049BE9C /* postFruitResponse.swift */; };
+		CED0B5F5283996AE0067988A /* WaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0B5F4283996AE0067988A /* WaterService.swift */; };
+		CED0B5F7283997600067988A /* WaterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0B5F6283997600067988A /* WaterResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,8 @@
 		CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		CE2443FB283981D60049BE9C /* PostFruitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFruitService.swift; sourceTree = "<group>"; };
 		CE2443FD283982640049BE9C /* postFruitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postFruitResponse.swift; sourceTree = "<group>"; };
+		CED0B5F4283996AE0067988A /* WaterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterService.swift; sourceTree = "<group>"; };
+		CED0B5F6283997600067988A /* WaterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +318,8 @@
 			children = (
 				CE2443FB283981D60049BE9C /* PostFruitService.swift */,
 				CE2443FD283982640049BE9C /* postFruitResponse.swift */,
+				CED0B5F4283996AE0067988A /* WaterService.swift */,
+				CED0B5F6283997600067988A /* WaterResponse.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -405,6 +411,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72892932839337F00588B39 /* WritingVC.swift in Sources */,
+				CED0B5F5283996AE0067988A /* WaterService.swift in Sources */,
+				CED0B5F7283997600067988A /* WaterResponse.swift in Sources */,
 				C728927228391FD100588B39 /* FruitTBC.swift in Sources */,
 				C728927428391FF800588B39 /* APIConstants.swift in Sources */,
 				C72892AE283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift in Sources */,
