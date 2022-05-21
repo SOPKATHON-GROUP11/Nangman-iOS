@@ -34,7 +34,6 @@ struct MyTreeService {
     }
     
     private func judgeGetMyTreeFruitMaximumCheck(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-        print(statusCode)
         switch statusCode {
         case 200: return isVaildGetMyTreeFruitMaximumCheck(data: data)
         case 400: return .pathErr
