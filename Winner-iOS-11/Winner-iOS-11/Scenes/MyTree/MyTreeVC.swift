@@ -39,8 +39,7 @@ extension MyTreeVC {
             switch networkResult {
             case .success(let res):
                 guard let response = res as? GetMyTreeFruitMaximumCheckModel else { return }
-                // Update 바스켓
-
+                print(response)
             default:
                 print("데이터 불러오기 실패")
             }

@@ -8,12 +8,16 @@
 import Foundation
 import Alamofire
 
+let headers: HTTPHeaders = [
+    "Content-Type": "application/json"
+]
+
 struct MyTreeService {
     static let shared = MyTreeService()
     
     func requestGetMyTreeFruitMaximumCheck(completion: @escaping (NetworkResult<Any>) -> (Void)) {
-        let url = APIConstants.getMyTreeFruit
-        let request = AF.request(url, method: .get, encoding: JSONEncoding.default)
+        let url = APIConstants.getMyTreeFruitMaximumCheck
+        let request = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers)
         
         request.responseData { dataResponse in
             switch dataResponse.result {
@@ -30,6 +34,7 @@ struct MyTreeService {
     }
     
     private func judgeGetMyTreeFruitMaximumCheck(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+        print(statusCode)
         switch statusCode {
         case 200: return isVaildGetMyTreeFruitMaximumCheck(data: data)
         case 400: return .pathErr
