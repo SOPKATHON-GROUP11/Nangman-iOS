@@ -61,13 +61,13 @@
                                         <rect key="frame" x="16" y="25" width="174" height="99"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqR-Va-pTJ">
-                                        <rect key="frame" x="24" y="33" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음을 채워주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0B-Kx-ruq">
+                                        <rect key="frame" x="24" y="33" width="86.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                        <color key="textColor" name="fruitGray1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -76,9 +76,9 @@
                                     <constraint firstItem="ltD-GN-fHu" firstAttribute="top" secondItem="ivX-bm-5qf" secondAttribute="bottom" id="3yc-cC-Nv7"/>
                                     <constraint firstItem="ltD-GN-fHu" firstAttribute="trailing" secondItem="ivX-bm-5qf" secondAttribute="trailing" id="MV7-lS-DEB"/>
                                     <constraint firstItem="ivX-bm-5qf" firstAttribute="top" secondItem="gac-ad-fmq" secondAttribute="top" constant="25" id="YCl-WQ-gHm"/>
-                                    <constraint firstItem="XqR-Va-pTJ" firstAttribute="top" secondItem="ivX-bm-5qf" secondAttribute="top" constant="8" id="YHX-AQ-LPy"/>
+                                    <constraint firstItem="U0B-Kx-ruq" firstAttribute="leading" secondItem="gac-ad-fmq" secondAttribute="leading" constant="24" id="YbY-XT-3Di"/>
+                                    <constraint firstItem="U0B-Kx-ruq" firstAttribute="top" secondItem="gac-ad-fmq" secondAttribute="top" constant="33" id="Ys1-6d-9bO"/>
                                     <constraint firstAttribute="trailing" secondItem="ivX-bm-5qf" secondAttribute="trailing" constant="16" id="aU9-63-6rL"/>
-                                    <constraint firstItem="XqR-Va-pTJ" firstAttribute="leading" secondItem="ivX-bm-5qf" secondAttribute="leading" constant="8" id="faB-IC-5A3"/>
                                     <constraint firstItem="ivX-bm-5qf" firstAttribute="leading" secondItem="gac-ad-fmq" secondAttribute="leading" constant="16" id="kG0-aO-iBq"/>
                                     <constraint firstAttribute="bottom" secondItem="ivX-bm-5qf" secondAttribute="bottom" constant="25" id="vNQ-jc-Twf"/>
                                 </constraints>
@@ -176,7 +176,7 @@
                         <outlet property="fruitImageView" destination="ZSH-eN-zW4" id="SUF-3w-GSt"/>
                         <outlet property="inputTextView" destination="ivX-bm-5qf" id="2A3-fX-bU4"/>
                         <outlet property="persimmonBtn" destination="Fd2-ty-hLB" id="w8z-K8-Em0"/>
-                        <outlet property="placeholderLabel" destination="XqR-Va-pTJ" id="52j-Nz-in5"/>
+                        <outlet property="placeholderLabel" destination="U0B-Kx-ruq" id="L2E-5l-Cel"/>
                         <outlet property="suggestionLabel" destination="wFD-Mn-F25" id="phG-HZ-GPD"/>
                         <outlet property="textCountLabel" destination="ltD-GN-fHu" id="2dO-Hz-giu"/>
                     </connections>
