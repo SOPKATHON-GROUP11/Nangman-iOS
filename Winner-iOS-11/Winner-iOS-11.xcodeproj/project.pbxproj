@@ -47,6 +47,7 @@
 		C72892AB283967D000588B39 /* MyTreeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AA283967D000588B39 /* MyTreeService.swift */; };
 		C72892AE283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */; };
 		C72892B02839705300588B39 /* GetMyTreeFruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */; };
+		C7CCBDD728397ED00027AB6B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CCBDD628397ED00027AB6B /* UIColor+.swift */; };
 		CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		C72892AA283967D000588B39 /* MyTreeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreeService.swift; sourceTree = "<group>"; };
 		C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyTreeFruitMaximumCheckModel.swift; sourceTree = "<group>"; };
 		C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyTreeFruitModel.swift; sourceTree = "<group>"; };
+		C7CCBDD628397ED00027AB6B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 				C7289281283924ED00588B39 /* UITextField+.swift */,
 				C7289283283925D000588B39 /* UIView+.swift */,
 				C72892852839278400588B39 /* UIButton+.swift */,
+				C7CCBDD628397ED00027AB6B /* UIColor+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				C728926C28391AD600588B39 /* BaseVC.swift in Sources */,
 				C72892AB283967D000588B39 /* MyTreeService.swift in Sources */,
 				C72892862839278400588B39 /* UIButton+.swift in Sources */,
+				C7CCBDD728397ED00027AB6B /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
