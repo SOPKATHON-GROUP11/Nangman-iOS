@@ -9,7 +9,7 @@ import Foundation
 
 struct APIConstants {
     // MARK: Base URL
-    static let baseURL = "http://3.39.234.8:8000"
+    static let baseURL = "http://3.34.192.134:8000"
 
     // MARK: Feature URL
     
