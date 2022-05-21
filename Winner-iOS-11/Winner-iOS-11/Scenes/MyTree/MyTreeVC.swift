@@ -14,6 +14,7 @@ class MyTreeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         requestGetMyTreeFruitMaximumCheck()
+        requestGetMyTreeFruit()
         
     }
     
@@ -39,6 +40,17 @@ extension MyTreeVC {
             switch networkResult {
             case .success(let res):
                 guard let response = res as? GetMyTreeFruitMaximumCheckModel else { return }
+            default:
+                print("데이터 불러오기 실패")
+            }
+        }
+    }
+    
+    private func requestGetMyTreeFruit() {
+        MyTreeService.shared.requestGetMyTreeFruit { networkResult in
+            switch networkResult {
+            case .success(let res):
+                guard let response = res as? [GetMyTreeFruitModel] else { return }
                 print(response)
             default:
                 print("데이터 불러오기 실패")
