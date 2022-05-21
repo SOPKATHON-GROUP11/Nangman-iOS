@@ -46,6 +46,7 @@
 		C72892A328394F9900588B39 /* FloatingButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892A228394F9900588B39 /* FloatingButtonVC.swift */; };
 		C72892AB283967D000588B39 /* MyTreeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AA283967D000588B39 /* MyTreeService.swift */; };
 		C72892AE283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */; };
+		C72892B02839705300588B39 /* GetMyTreeFruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */; };
 		CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		C72892A228394F9900588B39 /* FloatingButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonVC.swift; sourceTree = "<group>"; };
 		C72892AA283967D000588B39 /* MyTreeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreeService.swift; sourceTree = "<group>"; };
 		C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyTreeFruitMaximumCheckModel.swift; sourceTree = "<group>"; };
+		C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyTreeFruitModel.swift; sourceTree = "<group>"; };
 		CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */,
+				C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				C728927228391FD100588B39 /* FruitTBC.swift in Sources */,
 				C728927428391FF800588B39 /* APIConstants.swift in Sources */,
 				C72892AE283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift in Sources */,
+				C72892B02839705300588B39 /* GetMyTreeFruitModel.swift in Sources */,
 				C728924C2838F03A00588B39 /* ViewController.swift in Sources */,
 				696CAEA3283948DE00EB0B1D /* AllFruitListDataModel.swift in Sources */,
 				C728927A2839231400588B39 /* Adjusted+.swift in Sources */,
