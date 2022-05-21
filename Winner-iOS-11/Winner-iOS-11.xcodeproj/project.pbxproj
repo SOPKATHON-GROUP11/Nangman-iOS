@@ -49,6 +49,8 @@
 		C72892AE283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */; };
 		C72892B02839705300588B39 /* GetMyTreeFruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */; };
 		C7CCBDD728397ED00027AB6B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CCBDD628397ED00027AB6B /* UIColor+.swift */; };
+		C7CCBDD9283994320027AB6B /* PopUpOneBtnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CCBDD8283994320027AB6B /* PopUpOneBtnVC.swift */; };
+		C7CCBDDC2839979A0027AB6B /* PopUpBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CCBDDB2839979A0027AB6B /* PopUpBtn.xib */; };
 		CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */; };
 		CE2443FC283981D60049BE9C /* PostFruitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443FB283981D60049BE9C /* PostFruitService.swift */; };
 		CE2443FE283982640049BE9C /* postFruitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443FD283982640049BE9C /* postFruitResponse.swift */; };
@@ -99,6 +101,9 @@
 		C72892AD283968FA00588B39 /* GetMyTreeFruitMaximumCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyTreeFruitMaximumCheckModel.swift; sourceTree = "<group>"; };
 		C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyTreeFruitModel.swift; sourceTree = "<group>"; };
 		C7CCBDD628397ED00027AB6B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		C7CCBDD8283994320027AB6B /* PopUpOneBtnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpOneBtnVC.swift; sourceTree = "<group>"; };
+		C7CCBDDA283994350027AB6B /* PopUpOneBtnVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpOneBtnVC.xib; sourceTree = "<group>"; };
+		C7CCBDDB2839979A0027AB6B /* PopUpBtn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpBtn.xib; sourceTree = "<group>"; };
 		CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		CE2443FB283981D60049BE9C /* PostFruitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFruitService.swift; sourceTree = "<group>"; };
 		CE2443FD283982640049BE9C /* postFruitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postFruitResponse.swift; sourceTree = "<group>"; };
@@ -255,11 +260,14 @@
 		C7289287283932BC00588B39 /* MyTree */ = {
 			isa = PBXGroup;
 			children = (
+				C7CCBDD8283994320027AB6B /* PopUpOneBtnVC.swift */,
+				C7CCBDDA283994350027AB6B /* PopUpOneBtnVC.xib */,
 				C72892AC283968E100588B39 /* Model */,
 				C72892882839330E00588B39 /* MyTreeVC.storyboard */,
 				C728928A2839332200588B39 /* MyTreeVC.swift */,
 				C72892A228394F9900588B39 /* FloatingButtonVC.swift */,
 				C72892AA283967D000588B39 /* MyTreeService.swift */,
+				C7CCBDDB2839979A0027AB6B /* PopUpBtn.xib */,
 			);
 			path = MyTree;
 			sourceTree = "<group>";
@@ -400,6 +408,7 @@
 				C72892892839330E00588B39 /* MyTreeVC.storyboard in Resources */,
 				C72892962839339600588B39 /* FruitDetailVC.storyboard in Resources */,
 				C728924F2838F03A00588B39 /* Main.storyboard in Resources */,
+				C7CCBDDC2839979A0027AB6B /* PopUpBtn.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +447,7 @@
 				C728927C2839233300588B39 /* NSObject+.swift in Sources */,
 				C728926E28391E6900588B39 /* UIViewController+.swift in Sources */,
 				C728924A2838F03A00588B39 /* SceneDelegate.swift in Sources */,
+				C7CCBDD9283994320027AB6B /* PopUpOneBtnVC.swift in Sources */,
 				696CAEA52839702F00EB0B1D /* FruitListService.swift in Sources */,
 				696CAEA728397B8D00EB0B1D /* MyFruitListDataModel.swift in Sources */,
 				C728926C28391AD600588B39 /* BaseVC.swift in Sources */,

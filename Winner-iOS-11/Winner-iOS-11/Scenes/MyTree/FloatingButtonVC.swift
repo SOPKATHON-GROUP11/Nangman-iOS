@@ -10,15 +10,22 @@ import UIKit
 class FloatingButtonVC: UIViewController {
     
     
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var appleButton: UIButton!
     @IBOutlet weak var persimmonButton: UIButton!
     
     @IBOutlet weak var appleCenterY: NSLayoutConstraint!
     @IBOutlet weak var persimmonCenterY: NSLayoutConstraint!
     
+    var originAppleY = 0.0
+    var originPersimmonY = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+//        addButton.isHidden = true
+        originAppleY =  appleCenterY.constant
+        originPersimmonY = persimmonCenterY.constant
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,8 +33,8 @@ class FloatingButtonVC: UIViewController {
         
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: .curveEaseOut) {
             
-            self.appleCenterY.constant = 80
-            self.persimmonCenterY.constant = 160
+            self.appleCenterY.constant = 155
+            self.persimmonCenterY.constant = 219
             
             self.view.layoutIfNeeded()  //이걸 꼭 써줘야 갱신이 됨.
         } completion: { completion in
@@ -48,6 +55,9 @@ class FloatingButtonVC: UIViewController {
         guard let writingVC = UIStoryboard.init(name: WritingVC.className, bundle: nil).instantiateViewController(withIdentifier: WritingVC.className) as? WritingVC else { return }
         writingVC.modalPresentationStyle = .fullScreen
         self.present(writingVC, animated: true)
+    }
+    @IBAction func didTapDismissButton(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     private func setUI() {
         appleCenterY.constant = 0

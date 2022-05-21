@@ -6,10 +6,31 @@
 //
 
 import UIKit
+var isPosted = false
 
 class MyTreeVC: UIViewController {
     
     @IBOutlet weak var miningButton: UIButton!
+    
+    @IBOutlet weak var fruit1: UIButton!
+    @IBOutlet weak var fruit2: UIButton!
+    @IBOutlet weak var fruit3: UIButton!
+    @IBOutlet weak var fruit4: UIButton!
+    @IBOutlet weak var fruit5: UIButton!
+    @IBOutlet weak var fruit6: UIButton!
+    @IBOutlet weak var fruit7: UIButton!
+    @IBOutlet weak var fruit8: UIButton!
+    @IBOutlet weak var fruit9: UIButton!
+    @IBOutlet weak var fruit10: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isPosted == true {
+            fruit10.isHidden = false
+        } else {
+            fruit10.isHidden = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,18 +38,38 @@ class MyTreeVC: UIViewController {
         requestGetMyTreeFruit()
         requestPostMyTreeFruitBasket()
         
+        fruit10.isHidden = true
+        
     }
     
     @IBAction func didTapWriteButton(_ sender: Any) {
+        if isPosted {
+            guard let alert = Bundle.main.loadNibNamed(PopUpBtn.className, owner: self, options: nil)?.first as? PopUpBtn else { return }
+            alert.leftButton.press {
+                self.dismiss(animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    [self.fruit1, self.fruit2, self.fruit3, self.fruit4, self.fruit5, self.fruit6, self.fruit7, self.fruit8, self.fruit9, self.fruit10].forEach {
+                        $0?.isHidden = true
+                    }
+                }
+            }
+            alert.showPopUp(vc: self, message:
+                                """
+                                10개의 과일이 모여
+                                수확할 때가 됐어요!
+                                """
+                                , leftButtonTitle: "바구니에 보관할게요")
+        } else {
         guard let floatingButtonVC = self.storyboard?.instantiateViewController(withIdentifier: FloatingButtonVC.className) as? FloatingButtonVC else { return }
         floatingButtonVC.modalPresentationStyle = .overCurrentContext
         floatingButtonVC.modalTransitionStyle = .crossDissolve
         self.present(floatingButtonVC, animated: true)
     }
+}
 
-    @IBAction func didTapMiningButton(_ sender: Any) {
-        
-    }
+@IBAction func didTapMiningButton(_ sender: Any) {
+    
+}
 }
 
 extension MyTreeVC {

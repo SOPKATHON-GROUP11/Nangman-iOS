@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="gT5-Jh-HWa" customClass="PopUpVC" customModule="Winner_iOS_11" customModuleProvider="target">
+        <viewController id="gT5-Jh-HWa">
             <view key="view" contentMode="scaleToFill" id="EnL-89-ze8">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,44 +33,30 @@
                                 <color key="textColor" name="fruitGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxw-Gg-8p6">
-                                <rect key="frame" x="132" y="118" width="132" height="50"/>
-                                <color key="backgroundColor" name="fruitLightGray"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Gjw-Yl-8EM"/>
-                                </constraints>
-                                <color key="tintColor" name="mainDefault"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
-                                    <color key="titleColor" name="fruitGray1"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qv4-4S-V0x">
-                                <rect key="frame" x="0.0" y="118" width="132" height="50"/>
+                                <rect key="frame" x="0.0" y="110" width="264" height="58"/>
                                 <color key="backgroundColor" name="fruitLightGreen"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="UQv-kz-Ijz"/>
+                                    <constraint firstAttribute="height" constant="58" id="K0E-p9-l7y"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <color key="tintColor" name="gray2"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
+                                <state key="normal" title="바구니에 보관할게요">
                                     <color key="titleColor" name="fruitDeepGreen"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapLeftButton:" destination="gT5-Jh-HWa" eventType="touchUpInside" id="WM9-rN-BKc"/>
+                                    <action selector="didTapLeftButton:" destination="gT5-Jh-HWa" eventType="touchUpInside" id="u9Z-PR-y5L"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Qv4-4S-V0x" firstAttribute="width" secondItem="pZJ-vo-wjz" secondAttribute="width" multiplier="0.5" id="0WG-C0-pFI"/>
-                            <constraint firstItem="Qv4-4S-V0x" firstAttribute="leading" secondItem="pZJ-vo-wjz" secondAttribute="leading" id="0zu-j3-lsj"/>
-                            <constraint firstAttribute="trailing" secondItem="lxw-Gg-8p6" secondAttribute="trailing" id="EaB-MT-Cba"/>
-                            <constraint firstAttribute="bottom" secondItem="Qv4-4S-V0x" secondAttribute="bottom" id="FGL-A2-HBf"/>
-                            <constraint firstItem="lxw-Gg-8p6" firstAttribute="width" secondItem="Qv4-4S-V0x" secondAttribute="width" id="QhG-79-wP1"/>
+                            <constraint firstItem="Qv4-4S-V0x" firstAttribute="width" secondItem="pZJ-vo-wjz" secondAttribute="width" id="J5l-Ht-kco"/>
+                            <constraint firstItem="Qv4-4S-V0x" firstAttribute="leading" secondItem="pZJ-vo-wjz" secondAttribute="leading" id="jQO-a6-gAa"/>
                             <constraint firstItem="uLz-Hv-KIC" firstAttribute="leading" secondItem="pZJ-vo-wjz" secondAttribute="leading" constant="24" id="mbu-HK-EXL"/>
                             <constraint firstAttribute="trailing" secondItem="uLz-Hv-KIC" secondAttribute="trailing" constant="24" id="sN0-am-EFI"/>
-                            <constraint firstAttribute="bottom" secondItem="lxw-Gg-8p6" secondAttribute="bottom" id="vzc-pE-q0d"/>
+                            <constraint firstAttribute="bottom" secondItem="Qv4-4S-V0x" secondAttribute="bottom" id="yob-Dt-LAK"/>
                             <constraint firstItem="uLz-Hv-KIC" firstAttribute="top" secondItem="pZJ-vo-wjz" secondAttribute="top" constant="12" id="z2W-Um-d45"/>
                         </constraints>
                     </view>
@@ -85,10 +71,9 @@
                 </constraints>
             </view>
             <connections>
-                <outlet property="containerView" destination="pZJ-vo-wjz" id="p5j-5y-IH7"/>
-                <outlet property="contentLabel" destination="uLz-Hv-KIC" id="8YW-Jz-DzT"/>
-                <outlet property="leftButton" destination="Qv4-4S-V0x" id="5i2-3w-hjT"/>
-                <outlet property="rightButton" destination="lxw-Gg-8p6" id="wOE-0N-4EF"/>
+                <outlet property="containerView" destination="pZJ-vo-wjz" id="1Py-oK-BdK"/>
+                <outlet property="contentLabel" destination="uLz-Hv-KIC" id="mOL-Sk-h6W"/>
+                <outlet property="leftButton" destination="Qv4-4S-V0x" id="xII-oe-sHa"/>
             </connections>
             <point key="canvasLocation" x="-143.19999999999999" y="49.50738916256158"/>
         </viewController>
@@ -97,22 +82,13 @@
         <namedColor name="fruitDeepGreen">
             <color red="0.29399999976158142" green="0.48600000143051147" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="fruitGray1">
-            <color red="0.62000000476837158" green="0.62000000476837158" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="fruitGreen">
             <color red="0.45899999141693115" green="0.74099999666213989" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="fruitLightGray">
-            <color red="0.92900002002716064" green="0.92900002002716064" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="fruitLightGreen">
             <color red="0.9100000262260437" green="0.9570000171661377" blue="0.83499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray2">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="mainDefault">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">

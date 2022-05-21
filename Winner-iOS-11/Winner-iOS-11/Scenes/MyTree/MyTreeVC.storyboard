@@ -3,8 +3,8 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,38 +16,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-VO-3RX">
-                                <rect key="frame" x="265" y="701" width="46" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-cL-RzD">
+                                <rect key="frame" x="0.0" y="165" width="375" height="613"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-VO-3RX">
+                                <rect key="frame" x="311" y="664" width="48" height="48"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plusBtn"/>
                                 <connections>
                                     <action selector="didTapWriteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oN4-wU-vgk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwM-WH-WFR">
-                                <rect key="frame" x="0.0" y="577" width="91" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwM-WH-WFR">
+                                <rect key="frame" x="18" y="625" width="144" height="104"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="수확하기"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Artboard 6"/>
                                 <connections>
                                     <action selector="didTapMiningButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Pug-DH-ZD5"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-cL-RzD">
-                                <rect key="frame" x="0.0" y="165" width="375" height="613"/>
-                            </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuQ-AM-MSo">
+                                <rect key="frame" x="41" y="219" width="66" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Apple"/>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njc-qB-QiJ">
+                                <rect key="frame" x="268" y="351" width="66" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Apple"/>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gef-Aq-gXe">
+                                <rect key="frame" x="268" y="229" width="66" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Apple"/>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-Iz-rdo">
+                                <rect key="frame" x="117" y="285" width="66" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Apple"/>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNk-IJ-vK5">
+                                <rect key="frame" x="160" y="147" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Persimmon"/>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqD-QR-fud">
+                                <rect key="frame" x="199" y="279" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Persimmon"/>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ce-bC-7W0">
+                                <rect key="frame" x="63" y="351" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Persimmon"/>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xf9-4D-GZQ">
+                                <rect key="frame" x="176" y="409" width="66" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Apple"/>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-la-9K1">
+                                <rect key="frame" x="132" y="207" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Persimmon"/>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsj-0N-arC">
+                                <rect key="frame" x="33" y="293" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Persimmon"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="fruitBeige"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="KwM-WH-WFR" secondAttribute="bottom" constant="49" id="7RF-Wg-Oda"/>
                             <constraint firstItem="SHA-cL-RzD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AeI-7Q-M0t"/>
+                            <constraint firstItem="KwM-WH-WFR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="L5n-UI-RqF"/>
+                            <constraint firstAttribute="bottom" secondItem="CtB-VO-3RX" secondAttribute="bottom" constant="100" id="Lfy-Yh-blv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SHA-cL-RzD" secondAttribute="bottom" id="Msk-V0-mCO"/>
+                            <constraint firstItem="CtB-VO-3RX" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0591133" id="NxU-tZ-omO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CtB-VO-3RX" secondAttribute="trailing" constant="16" id="OFA-7u-bP0"/>
                             <constraint firstItem="SHA-cL-RzD" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="e8A-gC-nR0"/>
                             <constraint firstItem="SHA-cL-RzD" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.754926" id="sta-8H-YO1"/>
+                            <constraint firstItem="CtB-VO-3RX" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.128" id="uhq-1J-Jjh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fruit1" destination="fNk-IJ-vK5" id="k0w-Hr-nKe"/>
+                        <outlet property="fruit10" destination="Fsj-0N-arC" id="hdW-1A-HyC"/>
+                        <outlet property="fruit2" destination="RuQ-AM-MSo" id="yGI-En-MeQ"/>
+                        <outlet property="fruit3" destination="gef-Aq-gXe" id="VHp-sD-mMv"/>
+                        <outlet property="fruit4" destination="6ya-Iz-rdo" id="wlP-qu-OMo"/>
+                        <outlet property="fruit5" destination="cqD-QR-fud" id="M2Q-pz-9Tz"/>
+                        <outlet property="fruit6" destination="njc-qB-QiJ" id="hhi-Yf-zWa"/>
+                        <outlet property="fruit7" destination="8Ce-bC-7W0" id="xJh-Pa-czh"/>
+                        <outlet property="fruit8" destination="xf9-4D-GZQ" id="Wbu-gP-dN5"/>
+                        <outlet property="fruit9" destination="T7p-la-9K1" id="qfz-Yv-305"/>
                         <outlet property="miningButton" destination="KwM-WH-WFR" id="cqg-FW-RkN"/>
                     </connections>
                 </viewController>
@@ -64,27 +138,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsK-Nv-gpL">
-                                <rect key="frame" x="258" y="672" width="67" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="Mo5-Lf-W8m"/>
-                                    <constraint firstAttribute="height" constant="31" id="xeR-II-8CU"/>
-                                </constraints>
+                                <rect key="frame" x="311" y="525" width="48" height="72"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="appleBtn"/>
                                 <connections>
                                     <action selector="didTapAppleButton:" destination="kLI-x5-SJg" eventType="touchUpInside" id="19p-R4-cne"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMF-zj-rEc">
-                                <rect key="frame" x="258" y="718" width="67" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="KJR-cv-mSv"/>
-                                    <constraint firstAttribute="height" constant="31" id="sG7-Kb-QJM"/>
-                                </constraints>
+                                <rect key="frame" x="311" y="589" width="48" height="72"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gamBtn"/>
                                 <connections>
                                     <action selector="didTapPersimmonButton:" destination="kLI-x5-SJg" eventType="touchUpInside" id="9Cx-7p-nq2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiU-gP-hAi">
+                                <rect key="frame" x="311" y="664" width="48" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plusCancleBtn"/>
+                                <connections>
+                                    <action selector="didTapDismissButton:" destination="kLI-x5-SJg" eventType="touchUpInside" id="VI4-yz-H6V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,22 +166,27 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="eMF-zj-rEc" firstAttribute="centerY" secondItem="8XE-3O-oY0" secondAttribute="centerY" constant="285.5" id="6QZ-um-xoe"/>
-                            <constraint firstItem="eMF-zj-rEc" firstAttribute="top" secondItem="tsK-Nv-gpL" secondAttribute="bottom" constant="15" id="CLl-HW-fgO"/>
-                            <constraint firstItem="4C4-ih-BG6" firstAttribute="bottom" secondItem="eMF-zj-rEc" secondAttribute="bottom" constant="113" id="P3a-pC-S70"/>
-                            <constraint firstItem="4C4-ih-BG6" firstAttribute="trailing" secondItem="eMF-zj-rEc" secondAttribute="trailing" constant="50" id="dWA-sj-Yyk"/>
-                            <constraint firstItem="tsK-Nv-gpL" firstAttribute="centerY" secondItem="8XE-3O-oY0" secondAttribute="centerY" constant="239.5" id="mAC-L0-OqW"/>
-                            <constraint firstItem="4C4-ih-BG6" firstAttribute="trailing" secondItem="tsK-Nv-gpL" secondAttribute="trailing" constant="50" id="xYW-TA-Zfb"/>
+                            <constraint firstItem="eMF-zj-rEc" firstAttribute="trailing" secondItem="oiU-gP-hAi" secondAttribute="trailing" id="CBY-M7-x1J"/>
+                            <constraint firstItem="eMF-zj-rEc" firstAttribute="width" secondItem="oiU-gP-hAi" secondAttribute="width" id="FRe-5l-TP2"/>
+                            <constraint firstItem="4C4-ih-BG6" firstAttribute="trailing" secondItem="oiU-gP-hAi" secondAttribute="trailing" constant="16" id="Ke2-mt-g0D"/>
+                            <constraint firstItem="tsK-Nv-gpL" firstAttribute="trailing" secondItem="oiU-gP-hAi" secondAttribute="trailing" id="OOD-J4-u9d"/>
+                            <constraint firstItem="tsK-Nv-gpL" firstAttribute="centerY" secondItem="8XE-3O-oY0" secondAttribute="centerY" constant="155" id="PsR-kf-HEj"/>
+                            <constraint firstItem="oiU-gP-hAi" firstAttribute="width" secondItem="8XE-3O-oY0" secondAttribute="width" multiplier="0.128" id="Q8L-v8-q17"/>
+                            <constraint firstItem="eMF-zj-rEc" firstAttribute="centerY" secondItem="8XE-3O-oY0" secondAttribute="centerY" constant="219" id="bKn-wQ-FsJ"/>
+                            <constraint firstAttribute="bottom" secondItem="oiU-gP-hAi" secondAttribute="bottom" constant="100" id="hQu-Pu-po3"/>
+                            <constraint firstItem="oiU-gP-hAi" firstAttribute="height" secondItem="8XE-3O-oY0" secondAttribute="height" multiplier="0.0591133" id="n0b-Hc-8uM"/>
+                            <constraint firstItem="tsK-Nv-gpL" firstAttribute="width" secondItem="oiU-gP-hAi" secondAttribute="width" id="tpq-iS-LEk"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Hmf-DT-MYe" appends="YES" id="t9P-mO-GN1"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="oiU-gP-hAi" id="SBl-SK-feo"/>
                         <outlet property="appleButton" destination="tsK-Nv-gpL" id="Vh3-Qi-Rw5"/>
-                        <outlet property="appleCenterY" destination="mAC-L0-OqW" id="dU0-DV-IEk"/>
+                        <outlet property="appleCenterY" destination="PsR-kf-HEj" id="2fF-Ne-mLU"/>
                         <outlet property="persimmonButton" destination="eMF-zj-rEc" id="gzi-tn-ZGZ"/>
-                        <outlet property="persimmonCenterY" destination="6QZ-um-xoe" id="Noa-nT-PQx"/>
+                        <outlet property="persimmonCenterY" destination="bKn-wQ-FsJ" id="DkS-Jy-Frf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jc-AK-EFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,10 +200,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="Apple" width="42" height="44"/>
+        <image name="Artboard 6" width="120" height="90"/>
+        <image name="Persimmon" width="75" height="71.666664123535156"/>
+        <image name="appleBtn" width="58" height="58"/>
+        <image name="gamBtn" width="58" height="58"/>
+        <image name="plusBtn" width="58" height="58"/>
+        <image name="plusCancleBtn" width="58" height="58"/>
         <image name="tree" width="375" height="613"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="fruitBeige">
+            <color red="1" green="1" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
