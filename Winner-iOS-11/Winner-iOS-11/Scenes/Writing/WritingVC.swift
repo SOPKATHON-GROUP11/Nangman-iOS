@@ -51,7 +51,7 @@ class WritingVC: BaseVC {
         } else {
             appleBtn.backgroundColor = .fruitLightGray
             appleBtn.tintColor = .fruitGray1
-            fruitImageView.image = UIImage(named: "감이당 1")
+            fruitImageView.image = UIImage(named: "persimmon")
             fruitType = .persimmon
             suggestionLabel.textColor = .fruitOrange
             suggestionLabel.text = "감사의 마음을 담아봐요"
