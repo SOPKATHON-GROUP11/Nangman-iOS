@@ -1,28 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My TreeVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyTreeVC" id="Y6W-OH-hqX" customClass="MyTreeVC" customModule="Winner_iOS_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-cL-RzD">
+                                <rect key="frame" x="0.0" y="155" width="375" height="593"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-VO-3RX">
+                                <rect key="frame" x="265" y="701" width="46" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapWriteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oN4-wU-vgk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwM-WH-WFR">
+                                <rect key="frame" x="0.0" y="577" width="91" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="수확하기"/>
+                                <connections>
+                                    <action selector="didTapMiningButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Pug-DH-ZD5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="miningButton" destination="KwM-WH-WFR" id="cqg-FW-RkN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="66.400000000000006" y="44.334975369458128"/>
+        </scene>
+        <!--Floating ButtonVC-->
+        <scene sceneID="SLZ-2T-xAH">
+            <objects>
+                <viewController storyboardIdentifier="FloatingButtonVC" id="kLI-x5-SJg" customClass="FloatingButtonVC" customModule="Winner_iOS_11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8XE-3O-oY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsK-Nv-gpL">
+                                <rect key="frame" x="258" y="672" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="Mo5-Lf-W8m"/>
+                                    <constraint firstAttribute="height" constant="31" id="xeR-II-8CU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapAppleButton:" destination="kLI-x5-SJg" eventType="touchUpInside" id="19p-R4-cne"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMF-zj-rEc">
+                                <rect key="frame" x="258" y="718" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="KJR-cv-mSv"/>
+                                    <constraint firstAttribute="height" constant="31" id="sG7-Kb-QJM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapPersimmonButton:" destination="kLI-x5-SJg" eventType="touchUpInside" id="9Cx-7p-nq2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4C4-ih-BG6"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="eMF-zj-rEc" firstAttribute="centerY" secondItem="8XE-3O-oY0" secondAttribute="centerY" constant="285.5" id="6QZ-um-xoe"/>
+                            <constraint firstItem="eMF-zj-rEc" firstAttribute="top" secondItem="tsK-Nv-gpL" secondAttribute="bottom" constant="15" id="CLl-HW-fgO"/>
+                            <constraint firstItem="4C4-ih-BG6" firstAttribute="bottom" secondItem="eMF-zj-rEc" secondAttribute="bottom" constant="113" id="P3a-pC-S70"/>
+                            <constraint firstItem="4C4-ih-BG6" firstAttribute="trailing" secondItem="eMF-zj-rEc" secondAttribute="trailing" constant="50" id="dWA-sj-Yyk"/>
+                            <constraint firstItem="tsK-Nv-gpL" firstAttribute="centerY" secondItem="8XE-3O-oY0" secondAttribute="centerY" constant="239.5" id="mAC-L0-OqW"/>
+                            <constraint firstItem="4C4-ih-BG6" firstAttribute="trailing" secondItem="tsK-Nv-gpL" secondAttribute="trailing" constant="50" id="xYW-TA-Zfb"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Hmf-DT-MYe" appends="YES" id="t9P-mO-GN1"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="appleButton" destination="tsK-Nv-gpL" id="Vh3-Qi-Rw5"/>
+                        <outlet property="appleCenterY" destination="mAC-L0-OqW" id="dU0-DV-IEk"/>
+                        <outlet property="persimmonButton" destination="eMF-zj-rEc" id="gzi-tn-ZGZ"/>
+                        <outlet property="persimmonCenterY" destination="6QZ-um-xoe" id="Noa-nT-PQx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Jc-AK-EFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Hmf-DT-MYe">
+                    <connections>
+                        <action selector="didTapBackgroundView:" destination="kLI-x5-SJg" id="wsi-Um-61z"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="760.86956521739137" y="44.866071428571423"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
