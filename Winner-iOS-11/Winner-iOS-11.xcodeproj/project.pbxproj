@@ -49,6 +49,8 @@
 		C72892B02839705300588B39 /* GetMyTreeFruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */; };
 		C7CCBDD728397ED00027AB6B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CCBDD628397ED00027AB6B /* UIColor+.swift */; };
 		CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */; };
+		CE2443FC283981D60049BE9C /* PostFruitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443FB283981D60049BE9C /* PostFruitService.swift */; };
+		CE2443FE283982640049BE9C /* postFruitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443FD283982640049BE9C /* postFruitResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyTreeFruitModel.swift; sourceTree = "<group>"; };
 		C7CCBDD628397ED00027AB6B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		CE2443FB283981D60049BE9C /* PostFruitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFruitService.swift; sourceTree = "<group>"; };
+		CE2443FD283982640049BE9C /* postFruitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postFruitResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,7 @@
 		C728928F2839335C00588B39 /* Writing */ = {
 			isa = PBXGroup;
 			children = (
+				CE2443FF283982BF0049BE9C /* API */,
 				C72892902839336C00588B39 /* WritingVC.storyboard */,
 				C72892922839337F00588B39 /* WritingVC.swift */,
 				CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */,
@@ -299,6 +304,15 @@
 				C72892AF2839705300588B39 /* GetMyTreeFruitModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2443FF283982BF0049BE9C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CE2443FB283981D60049BE9C /* PostFruitService.swift */,
+				CE2443FD283982640049BE9C /* postFruitResponse.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +418,7 @@
 				C72892762839203600588B39 /* GenericResponse.swift in Sources */,
 				696CAEA02839465600EB0B1D /* FruitListTVC.swift in Sources */,
 				C728928E2839335600588B39 /* PopUpVC.swift in Sources */,
+				CE2443FE283982640049BE9C /* postFruitResponse.swift in Sources */,
 				C728928B2839332200588B39 /* MyTreeVC.swift in Sources */,
 				C72892982839339D00588B39 /* FruitDetailVC.swift in Sources */,
 				C7289284283925D000588B39 /* UIView+.swift in Sources */,
@@ -417,6 +432,7 @@
 				C72892AB283967D000588B39 /* MyTreeService.swift in Sources */,
 				C72892862839278400588B39 /* UIButton+.swift in Sources */,
 				C7CCBDD728397ED00027AB6B /* UIColor+.swift in Sources */,
+				CE2443FC283981D60049BE9C /* PostFruitService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
