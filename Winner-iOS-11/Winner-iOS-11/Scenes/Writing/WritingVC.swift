@@ -16,6 +16,7 @@ class WritingVC: BaseVC {
     @IBOutlet weak var appleBtn: UIButton!
     @IBOutlet weak var persimmonBtn: UIButton!
     @IBOutlet weak var fruitImageView: UIImageView!
+    @IBOutlet weak var suggestionLabel: UILabel!
     
     var fruitType: FruitType = .apple
     
@@ -45,11 +46,15 @@ class WritingVC: BaseVC {
             persimmonBtn.tintColor = .fruitGray1
             fruitImageView.image = UIImage(named: "4")
             fruitType = .apple
+            suggestionLabel.textColor = UIColor.fruitRed
+            suggestionLabel.text = "사과의 마음을 담아봐요"
         } else {
             appleBtn.backgroundColor = .fruitLightGray
             appleBtn.tintColor = .fruitGray1
             fruitImageView.image = UIImage(named: "감이당 1")
             fruitType = .persimmon
+            suggestionLabel.textColor = .fruitOrange
+            suggestionLabel.text = "감사의 마음을 담아봐요"
         }
     }
     
