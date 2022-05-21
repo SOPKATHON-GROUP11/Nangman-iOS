@@ -28,15 +28,20 @@ class FruitTBC: UITabBarController {
                     FruitListVC.className) as? FruitListVC
         else { return }
         
-        allFruitListVC.tabBarItem = UITabBarItem (title: "모든과일", image: UIImage(systemName: "hous.fill"  ), selectedImage: UIImage(systemName: "house.fill"))
-        myTreeVC.tabBarItem = UITabBarItem (title: "마이트리", image: UIImage(systemName: "hous.fill"  ), selectedImage: UIImage(systemName: "house.fill"))
-        myFruitListVC.tabBarItem = UITabBarItem (title: "내과일", image: UIImage(systemName: "hous.fill"  ), selectedImage: UIImage(systemName: "house.fill"))
+//        allFruitListVC.tabBarItem = UITabBarItem (title: "모든과일", image: UIImage(systemName: "hous.fill"  ), selectedImage: UIImage(systemName: "house.fill"))
+//        myTreeVC.tabBarItem = UITabBarItem (title: "마이트리", image: UIImage(systemName: "hous.fill"  ), selectedImage: UIImage(systemName: "house.fill"))
+//        myFruitListVC.tabBarItem = UITabBarItem (title: "내과일", image: UIImage(systemName: "hous.fill"  ), selectedImage: UIImage(systemName: "house.fill"))
+        
+        tabBar.unselectedItemTintColor = .fruitGreen
+        tabBar.tintColor = .fruitDeepGreen
 
-//        allFruitVC.tabBarItem = UITabBarItem (title: "", image: UIImage(named:  ), selectedImage: UIImage(named: ))
-//        myTreeVC.tabBarItem = UITabBarItem (title: "", image: UIImage(named: ), selectedImage: UIImage(named: ))
-//        myFruitListVC.tabBarItem = UITabBarItem (title: "", image: UIImage(named: ), selectedImage: UIImage(named: ))
+        allFruitListVC.tabBarItem = UITabBarItem (title: "모든 과일", image: UIImage(named: "icAll" ), selectedImage:  UIImage(named: "icAll_selected"))
+        myTreeVC.tabBarItem = UITabBarItem (title: "마이 트리", image: UIImage(named: "icHome"), selectedImage: UIImage(named: "icHome_selected"))
+        myFruitListVC.tabBarItem = UITabBarItem (title: "내 과일", image: UIImage(named: "icMypage"), selectedImage: UIImage(named: "icMypage_selected" ))
+        
 //        allFruitListVC.isAll = false
 
         setViewControllers([allFruitListVC, myTreeVC, myFruitListVC], animated: true)
     }
 }
+
