@@ -50,6 +50,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapAppleButton:" destination="kLI-x5-SJg" eventType="touchUpInside" id="19p-R4-cne"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMF-zj-rEc">
                                 <rect key="frame" x="258" y="718" width="67" height="31"/>
@@ -59,6 +62,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapPersimmonButton:" destination="kLI-x5-SJg" eventType="touchUpInside" id="9Cx-7p-nq2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4C4-ih-BG6"/>

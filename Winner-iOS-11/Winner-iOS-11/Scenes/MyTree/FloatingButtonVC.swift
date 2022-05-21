@@ -34,14 +34,21 @@ class FloatingButtonVC: UIViewController {
             //애니메이션이 끝나는 시점에서 실행
         }
     }
-
-    @IBAction func didTapDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    
     @IBAction func didTapBackgroundView(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
+    @IBAction func didTapPersimmonButton(_ sender: Any) {
+        guard let writingVC = UIStoryboard.init(name: WritingVC.className, bundle: nil).instantiateViewController(withIdentifier: WritingVC.className) as? WritingVC else { return }
+        writingVC.modalPresentationStyle = .fullScreen
+        self.present(writingVC, animated: true)
+    }
+    @IBAction func didTapAppleButton(_ sender: Any) {
+        guard let writingVC = UIStoryboard.init(name: WritingVC.className, bundle: nil).instantiateViewController(withIdentifier: WritingVC.className) as? WritingVC else { return }
+        writingVC.modalPresentationStyle = .fullScreen
+        self.present(writingVC, animated: true)
+    }
     private func setUI() {
         appleCenterY.constant = 0
         persimmonCenterY.constant = 0
