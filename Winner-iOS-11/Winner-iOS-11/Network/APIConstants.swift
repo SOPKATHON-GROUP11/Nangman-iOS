@@ -9,7 +9,7 @@ import Foundation
 
 struct APIConstants {
     // MARK: Base URL
-    static let baseURL = "http://3.39.234.8:8000"
+    static let baseURL = "http://3.34.192.134:8000"
 
     // MARK: Feature URL
     
@@ -34,7 +34,7 @@ struct APIConstants {
     static let getMyFruit = baseURL + "/fruit/my"
     
     /// 트리에 달려있는 본인 게시글 전체 조회
-    static let getMyTreeFruit = baseURL + "/fruit/my"
+    static let getMyTreeFruit = baseURL + "/fruit/my/tree"
     
     /// 트리에 달려있는 게시물이 10개가 넘는지 확인
     static let getMyTreeFruitMaximumCheck = baseURL + "/my/check"
