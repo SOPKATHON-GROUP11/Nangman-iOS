@@ -1,28 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WritingVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WritingVC" id="Y6W-OH-hqX" customClass="WritingVC" customModule="Winner_iOS_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글쓰기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCU-qq-5hb">
+                                <rect key="frame" x="187.5" y="61" width="39" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ivX-bm-5qf">
+                                <rect key="frame" x="24" y="362" width="366" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="v2B-lC-S3N"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqR-Va-pTJ">
+                                <rect key="frame" x="32" y="370" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltD-GN-fHu">
+                                <rect key="frame" x="344.5" y="662" width="45.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ivX-bm-5qf" secondAttribute="bottom" constant="200" id="2sR-yp-wZc"/>
+                            <constraint firstItem="XqR-Va-pTJ" firstAttribute="top" secondItem="ivX-bm-5qf" secondAttribute="top" constant="8" id="NaI-Rv-EUg"/>
+                            <constraint firstItem="QCU-qq-5hb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="17" id="Vcr-vj-PVb"/>
+                            <constraint firstItem="ltD-GN-fHu" firstAttribute="trailing" secondItem="ivX-bm-5qf" secondAttribute="trailing" id="WP3-xD-2b9"/>
+                            <constraint firstItem="QCU-qq-5hb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="b5s-Bh-YTH"/>
+                            <constraint firstItem="ivX-bm-5qf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="eqV-iN-54B"/>
+                            <constraint firstItem="ltD-GN-fHu" firstAttribute="top" secondItem="ivX-bm-5qf" secondAttribute="bottom" id="ovJ-Ya-j1v"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ivX-bm-5qf" secondAttribute="trailing" constant="24" id="q9t-JF-AXK"/>
+                            <constraint firstItem="XqR-Va-pTJ" firstAttribute="leading" secondItem="ivX-bm-5qf" secondAttribute="leading" constant="8" id="vkv-WS-6Pp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="ivX-bm-5qf" id="2A3-fX-bU4"/>
+                        <outlet property="placeholderLabel" destination="XqR-Va-pTJ" id="52j-Nz-in5"/>
+                        <outlet property="textCountLabel" destination="ltD-GN-fHu" id="2dO-Hz-giu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="59.598214285714285"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

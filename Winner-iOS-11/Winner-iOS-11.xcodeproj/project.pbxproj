@@ -39,6 +39,7 @@
 		C728929B283933C600588B39 /* FruitListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C728929A283933C600588B39 /* FruitListVC.storyboard */; };
 		C728929D283933CE00588B39 /* FruitListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728929C283933CE00588B39 /* FruitListVC.swift */; };
 		C72892A12839410000588B39 /* PopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72892A02839410000588B39 /* PopUpVC.xib */; };
+		CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		C728929A283933C600588B39 /* FruitListVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitListVC.storyboard; sourceTree = "<group>"; };
 		C728929C283933CE00588B39 /* FruitListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListVC.swift; sourceTree = "<group>"; };
 		C72892A02839410000588B39 /* PopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpVC.xib; sourceTree = "<group>"; };
+		CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			children = (
 				C72892902839336C00588B39 /* WritingVC.storyboard */,
 				C72892922839337F00588B39 /* WritingVC.swift */,
+				CE2443EC28394E0F0049BE9C /* CustomSegmentedControl.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				C728927A2839231400588B39 /* Adjusted+.swift in Sources */,
 				C72892782839205E00588B39 /* NetworkResult.swift in Sources */,
 				C72892482838F03A00588B39 /* AppDelegate.swift in Sources */,
+				CE2443ED28394E0F0049BE9C /* CustomSegmentedControl.swift in Sources */,
 				C728927E2839240A00588B39 /* UILabel+.swift in Sources */,
 				C72892802839249300588B39 /* UITableView+.swift in Sources */,
 				C72892762839203600588B39 /* GenericResponse.swift in Sources */,
@@ -436,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -490,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
