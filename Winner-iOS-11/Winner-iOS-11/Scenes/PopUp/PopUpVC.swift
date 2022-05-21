@@ -29,7 +29,7 @@ class PopUpVC: BaseVC {
         contentLabel.textAlignment = .center
     }
     @IBAction func didTapLeftButton(_ sender: Any) {
-        self.dismiss(animated: true)
+        //self.dismiss(animated: true)
     }
     
     func showPopUp(vc: UIViewController, message: String, rightButtonTitle: String, leftButtonTitle: String) {

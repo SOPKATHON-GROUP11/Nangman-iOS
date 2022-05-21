@@ -92,6 +92,9 @@
                                 <rect key="frame" x="327" y="16" width="32" height="32"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="Frame 59428"/>
+                                <connections>
+                                    <action selector="didTapCancelBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7Ht-l5-rtw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사과의 마음을 담아봐요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFD-Mn-F25">
                                 <rect key="frame" x="93" y="104" width="189" height="24"/>

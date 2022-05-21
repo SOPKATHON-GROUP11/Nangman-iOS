@@ -76,6 +76,26 @@ class WritingVC: BaseVC {
             }
         }
     }
+    
+    @IBAction func didTapCancelBtn(_ sender: UIButton) {
+        guard let alert = Bundle.main.loadNibNamed(PopUpVC.className, owner: self, options: nil)?.first as? PopUpVC else { return }
+        alert.leftButton.press {
+            self.dismiss(animated: true, completion: nil)
+        }
+        alert.rightButton.press {
+            self.dismiss(animated: true) {
+                self.dismiss(animated: true)
+            }
+        }
+        alert.showPopUp(vc: self, message:
+                            """
+                            열매 달기를 그만두실건가요?
+                            작성된 글은 삭제돼요
+                            """
+                            , rightButtonTitle: "안달래요"
+
+                            , leftButtonTitle: "달래요")
+    }
 }
 
 
