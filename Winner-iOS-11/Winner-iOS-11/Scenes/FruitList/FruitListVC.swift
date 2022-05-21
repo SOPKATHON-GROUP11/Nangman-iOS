@@ -18,6 +18,8 @@ class FruitListVC: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        requestGetAllFruitURL()
     }
     
     private func setTableView() {
@@ -44,6 +46,24 @@ extension FruitListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FruitListTVC.className, for: indexPath)
         return cell
+    }
+}
+
+extension FruitListVC {
+    private func fetchData() {
+        
+    }
+    
+    private func requestGetAllFruitURL() {
+        FruitListService.shared.requestGetAllFruitURL() { networkResult in
+            switch networkResult {
+            case .success(let res):
+                guard let response = res as? [AllFruitListDataModel] else { return }
+                print(response)
+            default:
+                print("데이터 불러오기 실패")
+            }
+        }
     }
 }
 
