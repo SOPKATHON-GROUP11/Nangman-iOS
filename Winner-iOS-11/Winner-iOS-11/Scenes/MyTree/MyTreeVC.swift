@@ -13,6 +13,8 @@ class MyTreeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        requestGetMyTreeFruitMaximumCheck()
+        
     }
     
     @IBAction func didTapWriteButton(_ sender: Any) {
@@ -24,5 +26,23 @@ class MyTreeVC: UIViewController {
 
     @IBAction func didTapMiningButton(_ sender: Any) {
         
+    }
+}
+
+extension MyTreeVC {
+    private func fetchData() {
+        
+    }
+    
+    private func requestGetMyTreeFruitMaximumCheck() {
+        MyTreeService.shared.requestGetMyTreeFruitMaximumCheck() { networkResult in
+            switch networkResult {
+            case .success(let res):
+                guard let response = res as? GetMyTreeFruitMaximumCheckModel else { return }
+                print(response)
+            default:
+                print("데이터 불러오기 실패")
+            }
+        }
     }
 }
