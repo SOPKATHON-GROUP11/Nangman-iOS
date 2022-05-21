@@ -19,7 +19,13 @@ class FruitListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestGetAllFruitURL()
+//        requestGetAllFruitURL() //모든 과일
+        requestGetMyFruit() //내 과일
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        requestGetAllFruitURL() //모든 과일
+        requestGetMyFruit() //내 과일
     }
     
     private func setTableView() {
@@ -40,7 +46,7 @@ extension FruitListVC: UITableViewDelegate{
 extension FruitListVC: UITableViewDataSource {
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return 1
-        //return FruitListDataModel.sampleData.count
+//       return MyFruitListDataModel.count
    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,6 +65,19 @@ extension FruitListVC {
             switch networkResult {
             case .success(let res):
                 guard let response = res as? [AllFruitListDataModel] else { return }
+                print(response)
+            default:
+                print("데이터 불러오기 실패")
+            }
+        }
+    }
+    
+    private func requestGetMyFruit() {
+        FruitListService.shared.requestGetMyFruit() { networkResult in
+            switch networkResult {
+            case .success(let res):
+                guard let response = res as? [MyFruitListDataModel] else { return }
+                print("내과일")
                 print(response)
             default:
                 print("데이터 불러오기 실패")

@@ -8,10 +8,6 @@
 import Foundation
 import Alamofire
 
-//let headers: HTTPHeaders = [
-//    "Content-Type": "application/json"
-//]
-
 struct FruitListService {
     static let shared = FruitListService()
     
@@ -46,6 +42,40 @@ struct FruitListService {
     private func isVaildGetAllFruitURL(data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GenericResponse<[AllFruitListDataModel]>.self, from: data) else { return .pathErr }
+        return .success(decodedData.data ?? "None-Data")
+    }
+    
+    func requestGetMyFruit(completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        let url = APIConstants.getMyFruit
+        let request = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers)
+        
+        request.responseData { dataResponse in
+            switch dataResponse.result {
+            case .success:
+                guard let statusCode = dataResponse.response?.statusCode else { return }
+                guard let value = dataResponse.value else { return }
+                let networkResult = self.judgeGetMyFruit(by: statusCode, value)
+                completion(networkResult)
+            case .failure(let error):
+                print(error)
+                completion(.networkFail)
+            }
+        }
+    }
+    
+    private func judgeGetMyFruit(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+        print(statusCode)
+        switch statusCode {
+        case 200: return isVaildGetMyFruit(data: data)
+        case 400: return .pathErr
+        case 500: return .serverErr
+        default: return .networkFail
+        }
+    }
+    
+    private func isVaildGetMyFruit(data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(GenericResponse<[MyFruitListDataModel]>.self, from: data) else { return .pathErr }
         return .success(decodedData.data ?? "None-Data")
     }
 }
